@@ -15,7 +15,7 @@ function render(event) {
 
     const BASE_URL = `https://restcountries.com/v3.1/name/${value}`;
 
-    const getCountries = async () => {
+    const generateElement = async () => {
         const response = await fetch(BASE_URL);
         const data = await response.json();
         const errorElement = document.createElement("p");
@@ -57,7 +57,7 @@ function render(event) {
         main.append(countryContainer);
     };
 
-    getCountries();
+    generateElement();
     searchInput.value = "";
 }
 
@@ -75,7 +75,7 @@ form.addEventListener("submit", render);
 //const BASE_URL = 'https://restcountries.com/v3.1/name/{name}';
 
 
-const getCountries = async () => {
+const generateElement = async () => {
     const response = await fetch(BASE_URL);
     const data = await response.json();
 
@@ -109,6 +109,6 @@ const getCountries = async () => {
         main.append(countryContainer);
 }; 
 
-getCountries(); */
+generateElement(); */
 
 
