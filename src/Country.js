@@ -1,4 +1,3 @@
-
 export default class Country {
 
     constructor(name, flag) {
