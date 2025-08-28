@@ -1,0 +1,14 @@
+{
+  "name": "Atlas",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "Simon Pinkas",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^7.1.3"
+  }
+}
