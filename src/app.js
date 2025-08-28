@@ -67,6 +67,7 @@ form.addEventListener("submit", render);
 
 
 
+
 /* May be reused later if I have the time to make this class work */
 // Test url
 /* const BASE_URL = `https://restcountries.com/v3.1/name/${searchInput.value}`;
@@ -77,10 +78,6 @@ form.addEventListener("submit", render);
 const getCountries = async () => {
     const response = await fetch(BASE_URL);
     const data = await response.json();
-
-    console.log(data);
-    console.log(data[0].flag);
-    console.log(data[0].name.common);
 
     const countryContainer = document.createElement("div");
         countryContainer.classList.add("country-container");

@@ -4,8 +4,9 @@ export default class Country {
         this.name = name;
         this.flag = flag;
         this.population = population;
-        /* this.#countryElement = this.#generateElement(); */
+    
     }
+
 
     #generateElement() {
         const countryContainer = document.createElement("div");
@@ -14,21 +15,21 @@ export default class Country {
         countryContainer.innerHTML = `
         <article class="country--card">
 			<section class="country--flag">
-				<h1>${flag}</h1>
+				<h1>${data[0].flag}</h1>
 			</section>
 
 			<section class="country--name">
-				<h1>${name}</h1>
-				<h2>${official}</h2>
+				<h1>${data[0].name.common}</h1>
+				<h2>${data[0].name.official}</h2>
 			</section>
 
 			<section class="country--info">
-				<p>population: ${population}/p>
-				<p>region: ${region}</p>
+				<p>population: ${data[0].population}</p>
+				<p>region: ${data[0].region}</p>
 			</section>
 
 			<section class="country--actions">
-				<a class="country--map" href="${position}" target="_blank">
+				<a class="country--map" href="${data[0].maps.openStreetMaps}" target="_blank">
 					Display Map 📍
 				</a>
 			</section>
@@ -38,8 +39,7 @@ export default class Country {
 
     render() {
         const main = document.querySelector("main");
-        main.append(countryContainer);
-        return main;
+        main.append(this.#generateElement);
     }
 
 
